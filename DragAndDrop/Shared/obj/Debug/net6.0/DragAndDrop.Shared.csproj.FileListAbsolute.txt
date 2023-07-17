@@ -1,0 +1,12 @@
+C:\Projects\DragAndDrop\DragAndDrop\Shared\bin\Debug\net6.0\DragAndDrop.Shared.deps.json
+C:\Projects\DragAndDrop\DragAndDrop\Shared\bin\Debug\net6.0\DragAndDrop.Shared.dll
+C:\Projects\DragAndDrop\DragAndDrop\Shared\bin\Debug\net6.0\DragAndDrop.Shared.pdb
+C:\Projects\DragAndDrop\DragAndDrop\Shared\obj\Debug\net6.0\DragAndDrop.Shared.csproj.AssemblyReference.cache
+C:\Projects\DragAndDrop\DragAndDrop\Shared\obj\Debug\net6.0\DragAndDrop.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\DragAndDrop\DragAndDrop\Shared\obj\Debug\net6.0\DragAndDrop.Shared.AssemblyInfoInputs.cache
+C:\Projects\DragAndDrop\DragAndDrop\Shared\obj\Debug\net6.0\DragAndDrop.Shared.AssemblyInfo.cs
+C:\Projects\DragAndDrop\DragAndDrop\Shared\obj\Debug\net6.0\DragAndDrop.Shared.csproj.CoreCompileInputs.cache
+C:\Projects\DragAndDrop\DragAndDrop\Shared\obj\Debug\net6.0\DragAndDrop.Shared.dll
+C:\Projects\DragAndDrop\DragAndDrop\Shared\obj\Debug\net6.0\refint\DragAndDrop.Shared.dll
+C:\Projects\DragAndDrop\DragAndDrop\Shared\obj\Debug\net6.0\DragAndDrop.Shared.pdb
+C:\Projects\DragAndDrop\DragAndDrop\Shared\obj\Debug\net6.0\ref\DragAndDrop.Shared.dll

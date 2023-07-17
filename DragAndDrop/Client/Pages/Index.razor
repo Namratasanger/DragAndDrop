@@ -1,0 +1,37 @@
+﻿@page "/"
+<link rel="stylesheet" href="css/site.css"/>
+<PageTitle>Jira Tool</PageTitle>
+
+<JobsContainer Jobs="Jobs" OnStatusUpdated="HandleStatusUpdated">
+    <JobsList ListStatus="JobStatuses.Todo" AllowedStatuses="@(new JobStatuses[] { JobStatuses.Started, JobStatuses.Completed})" />
+    <JobsList ListStatus="JobStatuses.Started" AllowedStatuses="@(new JobStatuses[] { JobStatuses.Todo, JobStatuses.Completed })" />
+    <JobsList ListStatus="JobStatuses.Completed" AllowedStatuses="@(new JobStatuses[] {JobStatuses.Started, JobStatuses.Todo})" />
+</JobsContainer>
+
+<hr />
+<p>Last updated job was: <strong>@lastUpdatedJob</strong></p>
+<hr />
+
+@foreach (var task in Jobs)
+{
+    <p>@task.Description - <strong>@task.Status</strong></p>
+}
+
+@code {
+    List<JobModel> Jobs = new List<JobModel>();
+    string lastUpdatedJob = "";
+
+    protected override void OnInitialized()
+    {
+        Jobs.Add(new JobModel { Id = 1, Description = "Task 1", Status = JobStatuses.Todo, LastUpdated = DateTime.Now });
+        Jobs.Add(new JobModel { Id = 2, Description = "Task 2", Status = JobStatuses.Todo, LastUpdated = DateTime.Now });
+        Jobs.Add(new JobModel { Id = 3, Description = "Task 3", Status = JobStatuses.Todo, LastUpdated = DateTime.Now });
+        Jobs.Add(new JobModel { Id = 4, Description = "Task 4", Status = JobStatuses.Todo, LastUpdated = DateTime.Now });
+        Jobs.Add(new JobModel { Id = 5, Description = "Task 5", Status = JobStatuses.Todo, LastUpdated = DateTime.Now });
+    }
+
+    void HandleStatusUpdated(JobModel updatedJob)
+    {
+        lastUpdatedJob = updatedJob.Description;
+    }
+}
