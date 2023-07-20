@@ -7,6 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
+builder.Services.AddControllersWithViews()
+    .AddSessionStateTempDataProvider();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -28,7 +31,20 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+try
+{
+    app.UseEndpoints(endpoints =>
+    {
+        // Area Routes
+        endpoints.MapControllerRoute(name: "default", pattern: "{controller}/{action=Index}/{id?}");
 
+     
+    });
+}
+catch (Exception ex)
+{
+
+}
 app.MapRazorPages();
 app.MapControllers();
 app.MapFallbackToFile("index.html");
